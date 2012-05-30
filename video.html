@@ -1,0 +1,35 @@
+<!doctype html>
+<head>
+  <style type="text/css">
+    :-webkit-full-screen #myvideo {
+      width: 100%;
+      height: 100%;
+    }
+    video {
+      width: 100%;
+      height: 100%;
+    }
+    * {
+      background-color: #000000;
+    }
+  </style>
+</head>
+
+<body>
+  <div id='myvideo'>
+    <video src='BigBuckBunny_320x180.mp4#t=,584' width='854' height='480'>
+  </div>
+  <a href="javascript:fullscreen()">fullscreen</a>
+  <script>
+    function fullscreen() {
+      document.getElementById('myvideo').webkitRequestFullScreen();
+    }
+    document.addEventListener("keydown", function(e) {
+      if (e.keyCode == 13) { // enter
+        video = document.getElementsByTagName('video')[0];
+        video.currentTime = 581;
+        video.play();
+      }
+    });
+  </script>
+</body>
